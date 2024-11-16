@@ -1,32 +1,40 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Vincula el CSS -->
+    <title>Mi Tienda Online</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenido a Mi Sitio Web</h1>
+        <h1>Bienvenido a Mi Tienda</h1>
         <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
         </nav>
     </header>
-
-    <section id="contenido">
-        <h2>Mi Primera Página Web</h2>
-        <p>Este es un ejemplo básico de cómo crear un sitio web usando solo código.</p>
+    <section id="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="producto">
+            <img src="assets/producto1.jpg" alt="Producto 1">
+            <h3>Producto 1</h3>
+            <p>$10.00</p>
+            <button>AÃ±adir al Carrito</button>
+        </div>
     </section>
-
     <footer>
-        <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Mi Tienda Online</p>
     </footer>
-
-    <script src="script.js"></script> <!-- Vincula el archivo JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="tucorreo@paypal.com">
+    <input type="hidden" name="item_name" value="Producto 1">
+    <input type="hidden" name="amount" value="10.00">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="submit" value="Comprar ahora">
+</form>
