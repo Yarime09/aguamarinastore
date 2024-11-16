@@ -1,32 +1,5 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-header {
-    background: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}
-nav a {
-    color: white;
-    margin: 0 1rem;
-    text-decoration: none;
-}
-section {
-    padding: 2rem;
-}
-.producto {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin: 1rem 0;
-    text-align: center;
-}
-button {
-    background: #28a745;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Producto añadido al carrito');
+    });
+});
